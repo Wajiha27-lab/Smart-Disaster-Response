@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disaster Reports</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>📋 Submitted Disaster Reports</h1>
+</header>
+
+<div class="hero">
+
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+<tr>
+    <th>ID</th>
+    <th>Location</th>
+    <th>Report</th>
+    <th>AI Analysis</th>
+</tr>
+
+{% for report in reports %}
+<tr>
+    <td>{{ report[0] }}</td>
+    <td>{{ report[1] }}</td>
+    <td>{{ report[2] }}</td>
+    <td>{{ report[3] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>
