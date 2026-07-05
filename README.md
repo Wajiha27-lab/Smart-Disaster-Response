@@ -70,7 +70,7 @@ SmartDisasterResponse/
 Clone the repository:
 
 bash
-git clone https://github.com/YOUR_USERNAME/Smart-Disaster-Response.git
+git clone https://github.com/Wajiha27-lab/Smart-Disaster-Response
 
 
 Install dependencies:
