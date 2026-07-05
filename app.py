@@ -1,3 +1,4 @@
+import os 
 import google.generativeai as genai
 from dotenv import load_dotenv
 
@@ -5,7 +6,6 @@ import weather
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("gemini-2.5-flash")
-import os
 from flask import Flask, render_template, request, send_from_directory  # type: ignore
 from weather import get_weather
 from database import init_db, save_report, get_reports
