@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Analytics Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>📊 Disaster Analytics Dashboard</h1>
+
+<p>AI Powered Decision Intelligence</p>
+
+</header>
+
+<nav>
+
+<a href="/">Home</a>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/reports">Reports</a>
+
+<a href="/chatbot">AI Chatbot</a>
+
+</nav>
+
+<div class="hero">
+
+<h2>Project Statistics</h2>
+
+<div style="display:flex;gap:20px;flex-wrap:wrap;">
+
+<div style="background:#0d6efd;color:white;padding:20px;border-radius:10px;width:220px;">
+<h3>Total Reports</h3>
+<h1>{{ total_reports }}</h1>
+</div>
+
+<div style="background:#198754;color:white;padding:20px;border-radius:10px;width:220px;">
+<h3>High Risk</h3>
+<h1>{{ high_risk }}</h1>
+</div>
+
+<div style="background:#ffc107;color:black;padding:20px;border-radius:10px;width:220px;">
+<h3>Medium Risk</h3>
+<h1>{{ medium_risk }}</h1>
+</div>
+
+<div style="background:#dc3545;color:white;padding:20px;border-radius:10px;width:220px;">
+<h3>Low Risk</h3>
+<h1>{{ low_risk }}</h1>
+</div>
+
+</div>
+
+<br>
+
+<h2>Project Features</h2>
+
+<ul>
+
+<li>🤖 Gemini AI Analysis</li>
+
+<li>🌦️ Live Weather Monitoring</li>
+
+<li>📤 Disaster Report Upload</li>
+
+<li>🖼️ Image Upload</li>
+
+<li>🏠 Nearby Shelter Suggestions</li>
+
+<li>💾 SQLite Database</li>
+
+<li>📈 Analytics Dashboard</li>
+
+</ul>
+
+</div>
+
+<footer>
+
+<p>Smart Disaster Response & Flood Prediction</p>
+
+</footer>
+
+</body>
+
+</html>
