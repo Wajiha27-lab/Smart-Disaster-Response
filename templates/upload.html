@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>Upload Disaster Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>📤 Upload Disaster Report</h1>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/chatbot">AI Chatbot</a>
+</nav>
+
+<div class="hero">
+
+    <h2>Submit New Report</h2>
+
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+        <label>Location</label>
+        <input type="text" name="location" required>
+
+        <label>Describe the Disaster</label>
+        <textarea name="report" rows="6" required></textarea>
+
+        <label>Upload Image</label>
+        <input type="file" name="image">
+
+        <br><br>
+
+        <button type="submit">Submit Report</button>
+
+    </form>
+
+</div>
+
+<footer>
+    <p>Smart Disaster Response & Flood Prediction</p>
+</footer>
+
+</body>
+</html>
