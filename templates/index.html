@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Disaster Response & Flood Prediction</title>
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>🌊 Smart Disaster Response & Flood Prediction</h1>
+    <p>AI-Powered Decision Intelligence Platform</p>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/chatbot">AI Chatbot</a>
+    <a href="/upload">Upload Report</a>
+</nav>
+
+<section class="hero">
+
+    <h2>Report a Disaster</h2>
+
+    <form action="/analyze"
+     method="POST" 
+     enctype="multipart/form-data"
+     onsubmit="return validateForm()">
+
+        <label>Location</label><br>
+        <input type="text" name="location" placeholder="Enter location" required>
+
+        <br><br>
+
+        <label>Describe the Situation</label><br>
+
+        <textarea
+            name="report"
+            rows="6"
+            placeholder="Example: Heavy rainfall and flooding near the bridge..."
+            required></textarea>
+
+        <br><br>
+
+        <label>Upload Image</label><br>
+
+        <img id="imagePreview"
+     style="display:none;width:300px;margin-top:15px;border-radius:10px;">
+
+        <input type="file"
+         name="image"
+         onchange="previewImage(this)">
+
+        <br><br>
+
+        <button type="submit">
+            Analyze Disaster
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+
+    <p>
+        Built using Flask • Google Cloud • Gemini AI
+    </p>
+
+</footer>
+
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
